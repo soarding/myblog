@@ -5,6 +5,7 @@ nextTick 可以让我们在下次 DOM 更新循环结束之后执行延迟回调
 在 Vue 2.4 之前都是使用的 microtasks，但是 microtasks 的优先级过高，在某些情况下可能会出现比事件冒泡更快的情况，但如果都使用 macrotasks 又可能会出现渲染的性能问题。所以在新版本中，会默认使用 microtasks，但在特殊情况下会使用 macrotasks，比如 v-on。
 
 
+
 tasks
 ```javascript
   if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
