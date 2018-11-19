@@ -1,0 +1,1 @@
+用this.$refs.mask.hide()后，若用v-if则该组件从vue实例中删除，用v-show则不会有该问题
