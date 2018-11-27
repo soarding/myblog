@@ -24,7 +24,7 @@ function initComputed (vm: Component, computed: Object) {
         computedWatcherOptions
       )
     }
-	// 判断vm中不存在该计算属性时，调用defineComputed
+    // 判断vm中不存在该计算属性时，调用defineComputed
     if (!(key in vm)) {
       defineComputed(vm, key, userDef)
     } else if (process.env.NODE_ENV !== 'production') {
@@ -76,7 +76,7 @@ export function defineComputed (
 //创建computed的getter，在调用getter时收集依赖关系
 function createComputedGetter (key) {
   return function computedGetter () {
-	// 从_computedWatchers中取出初始化时传入的getter
+    // 从_computedWatchers中取出初始化时传入的getter
     const watcher = this._computedWatchers && this._computedWatchers[key]
     if (watcher) {
       if (watcher.dirty) {
